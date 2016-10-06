@@ -39,9 +39,6 @@ apt-get install gcc unzip python2.7 python-dev python-pychart python-gnupg pytho
 # install PostgreSQL
 apt-get install postgresql-9.5 postgresql-client postgresql-client-common postgresql-contrib-9.5 postgresql-server-dev-9.5 -y
 
-# remove the Ubuntu version of less as it interferes with the Node.js version
-apt-get remove less -y
-
 # create database user "odoo"
 /usr/bin/sudo -u $PG_USER_NAME ./create_pg_role.sh $PG_ROLE_ODOO_NAME $PG_ROLE_ODOO_PWD
 
