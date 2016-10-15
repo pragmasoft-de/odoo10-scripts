@@ -24,6 +24,14 @@ ODOO_ADMIN_PASSWD='$ecr3t'
 # needed later in the script to go back to the script directory
 START_DIR=$PWD
 
+# here we go ;-)
+
+# script must be run as root
+if [ $USER != "root" ]; then
+	echo "Script must be run as root"
+	exit
+fi
+
 # set timezone
 echo "Etc/UTC" > /etc/timezone
 
