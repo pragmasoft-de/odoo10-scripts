@@ -1,3 +1,7 @@
+; Template based odoo 10 config file.
+; (c) Josef Kaser 2016
+; http://www.pragmasoft.de
+
 [options]
 addons_path = /opt/odoo/odoo10/addons
 admin_passwd = {{admin_passwd}}
@@ -27,7 +31,7 @@ login_message = False
 logrotate = True
 max_cron_threads = 2
 netrpc = False
-netrpc_interface = 0.0.0.0
+netrpc_interface = {{interface_ip}}
 netrpc_port = 8070
 longpolling_port = 8072
 osv_memory_age_limit = 1.0
@@ -58,7 +62,7 @@ unaccent = False
 without_demo = False
 workers = 5
 xmlrpc = True
-xmlrpc_interface = 0.0.0.0
+xmlrpc_interface = {{interface_ip}}
 xmlrpc_port = 8069
 xmlrpcs = True
 xmlrpcs_interface =

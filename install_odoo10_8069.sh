@@ -3,6 +3,8 @@
 # Script to install odoo 10 on Ubuntu Server 16.04 LTS.
 # (c) Josef Kaser 2016
 # http://www.pragmasoft.de
+#
+# odoo will be listening on port 8069 on the external IP
 
 # variables
 
@@ -23,6 +25,9 @@ ODOO_ADMIN_PASSWD='$ecr3t'
 
 # needed later in the script to go back to the script directory
 START_DIR=$PWD
+
+# IP address the odoo service listens to
+INTERFACE_IP=`hostname -I | awk '{print $1}'`
 
 # here we go ;-)
 
@@ -72,6 +77,7 @@ cp odoo10.conf.template odoo10.conf
 sed -i s/{{admin_passwd}}/$ODOO_ADMIN_PASSWD/ odoo10.conf
 sed -i s/{{db_password}}/$PG_ROLE_ODOO_PWD/ odoo10.conf
 sed -i s/{{db_user}}/$PG_ROLE_ODOO_NAME/ odoo10.conf
+sed -i s/{{interface_ip}}/$INTERFACE_IP/ odoo10.conf
 
 # copy odoo10.conf to /etc/odoo
 cd /etc
