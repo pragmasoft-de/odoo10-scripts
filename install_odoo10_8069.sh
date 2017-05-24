@@ -89,9 +89,9 @@ cp $START_DIR/odoo10.conf .
 cd /tmp
 mkdir wkhtmltopdf
 cd wkhtmltopdf
-wget http://download.gna.org/wkhtmltopdf/0.12/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
-unxz wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
-tar xvf wkhtmltox-0.12.3_linux-generic-amd64.tar
+wget http://download.gna.org/wkhtmltopdf/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
+unxz wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
+tar xvf wkhtmltox-0.12.4_linux-generic-amd64.tar
 cd wkhtmltox/bin
 cp * /usr/local/bin/
 cd /usr/bin
