@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Script to install odoo 10 on Ubuntu Server 16.04 LTS.
-# (c) Josef Kaser 2016
+# (c) Josef Kaser 2016 - 2017
 # http://www.pragmasoft.de
 #
 # odoo will be listening on port 8069 on the external IP
